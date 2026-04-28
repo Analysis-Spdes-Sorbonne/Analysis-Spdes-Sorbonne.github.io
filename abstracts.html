@@ -116,6 +116,91 @@
     color: var(--accent-color);
     text-decoration: none;
   }
+  
+
+
+/* --- TALK BOXES --- */
+.talks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 2rem 0 3rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.talk-box {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    border-left: 6px solid #b7dee8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.talk-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* Color-coded left borders matching the program legend */
+.talk-box.mc1  { border-left-color: #ffc000; }
+.talk-box.mc2  { border-left-color: #92d050; }
+.talk-box.tk1  { border-left-color: #b7dee8; }
+.talk-box.tk2  { border-left-color: #FF7F7F; }
+
+.talk-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--secondary-text);
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+
+.talk-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.talk-speaker {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary-text);
+    margin: 0 0 18px 0;
+    font-style: italic;
+}
+
+.talk-speaker a {
+    color: var(--nav-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--nav-color);
+    transition: all 0.2s ease;
+}
+
+.talk-speaker a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.talk-abstract {
+    line-height: 1.8;
+    font-size: 15px;
+    color: var(--primary-text);
+    text-align: justify;
+    margin: 0;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+}
 
   /* Original Logos Section CSS */
   .logos-section {
@@ -164,7 +249,9 @@
     .logos-container { gap: 32px; }
     .glass-navbar .nav-container { flex-direction: column; gap: 16px; padding: 16px; }
     .glass-navbar .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
-  }
+    .talk-box { padding: 22px; }
+    .talk-title { font-size: 22px; }
+}
 </style>
 <body>
 
@@ -175,7 +262,7 @@
                 <a href="index.html">Home</a>
                 <a href="program.html">Program</a>
                 <a href="abstracts.html">Abstracts</a>
-                <a href="participants.html">Participants</a>
+                <!-- <a href="participants.html">Participants</a> -->
                 <a href="registration.html">Registration</a>
             </div>
         </div>
@@ -187,100 +274,112 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                        <h1>The development of drug resistance in metastatic tumours: An evolutionary perspective</h1>
-                        <span class="meta">Posted by <a href="#">Federica Padovano</a> on June 24, 2025</span>
+                    <div class="page-heading">
+                        <h1> Abstracts </h1>
+                        <hr class="small">
+                        <span class="subheading"></span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Post Content -->
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    A brief comment on the paper <a href="https://arxiv.org/abs/2405.20203">"The development of drug resistance in metastatic tumours: An evolutionary perspective"</a>.
-                    <h3>Biological context and motivation</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="abstract">
                     <p>
-                        In $2022$ around $9.7$ million of people died for cancer worldwide, accounting for approximately $15\%$ of total deaths, making it one of the primary health problems globally. 
-                        In particular, metastases are responsible for approximately $90\%$ of cancer-related mortality. 
-                        These form following a multi-step process comprising the migration of cancer cells from the original site to regional or distant organs and lymph nodes, e.g. by accessing the lymphatic or blood vessels. 
-                        In this latter case the metastatic steps include local invasion of regions surrounding the primary tumour,  the cancer-induced formation of new blood vessels to access more nutrients and foster cancer growth, process known as angiogenesis, intravasation, survival in the circulatory system and extravasation through vascular walls of distant sites. 
-                        The process of primary tumour cells colonization of other tissues is known as metastatic spread, or primary seeding, meanwhile when cells return to the original site or an existing metastasis they contribute to self-seeding.
-                        Moreover, if the population in the metastatic site grows and acquires itself the ability to metastasise, it can spread to other sites, phenomenon known as secondary seeding.
+                        Below are the titles, speakers, and abstracts of the mini-courses and seminar talks
+                        of the workshop.
                     </p>
-                    <img class="img-responsive" src="img/Ica_biological_background.png" alt="">
-                    <p>
-                        Chemotherapy, i.e. the use of cytotoxic drugs to kill cancer cells,  is to this day considered the most effective, and thus most widely used, modality of cancer treatment. 
-                        The development of drug resistance confers a selective advantage upon the cancer cell population, as cancer cells exhibit reduced sensitivity to cytotoxic compounds, and represents a significant challenge in cancer therapies as it often contributes to disease relapse.  
-                        Despite the efforts put into the development of treatment strategies evading or reverting the development of drug resistance, this process becomes significantly more complex in metastatic cancers,  given the exposure of tumours in distinct organs to disparate concentrations of therapeutic agents and environmental factors.  
-                        In fact, it has been reported that even if standard chemotherapy effectively controls disease progression at the primary tumour site, it often fails to influence metastatic populations.  
-                        Moreover, many studies suggest that there is a strong correlation between treatment resistance and metastatic ability, i.e. cancer cells with lower sensitivity to cytotoxic agents usually also manifest enhanced disseminating properties. 
-                        Therefore the development of drug resistance in the primary tumour during chemotherapy, even in reversible cases,  may favour the persistence of its metastases.  
-                        Nevertheless, it is still unclear whether metastases are intrinsically more resistant than the primary tumour or if their reduced sensitivity arises because they originate from particularly aggressive cell subpopulations or due to subsequent evolution after dissemination.  
-                        It may therefore be beneficial to test existing hypotheses on the development of drug resistance in metastatic tumours under chemotherapy using proof-of-concept theoretical frameworks. 
-                    </p>
-                    <img class="img-responsive" src="img/Ica_2.png" alt="">
-                    <h3>Mathematical modelling background</h3>
-                    <p>
-                        Mathematical modelling is a valuable tool for gaining insights into the mechanisms driving cancer evolution and the emergence of intratumour and intertumour heterogeneity, for simulating complex and long-term dynamics that may take years to observe in real-life settings, and for designing optimised therapeutic strategies.  
-                        All three objectives share a common aim of paving the way towards precision medicine, i.e. the innovative idea of targeting therapies on patients in order to increase their efficacy.
-                    </p>
-                    <p>
-                        Many mathematical models have been previously employed to describe the different steps of the metastatic cascade, see the review article and references therein. 
-                        These may focus, for instance, on the development of metastatic phenotypes, their intravasation and extravasation, or extensive cell dissemination and potential evolution of cells from the primary to the metastatic site. 
-                        as the evolution of invasive phenotypes, cells intravasation and extravasation, cells dissemination and interactions between primary and secondary tumors. 
-                        Moreover, some of them also investigate the effect of therapeutic treatments, such as chemotherapy, radiotherapy and immunotherapy, alone or combined, on metastatic cancers.
-                        Among these, Sun et al. accounted for the existence of a sensitive and a drug-resistant subpopulation in the primary site. Nevertheless, drug-resistance levels may be better captured on a continuum, and phenotypic heterogeneity in the metastatic site may also play an important role in the failure of treatment.
-                    </p>
-                    <p>
-                        However, only few studies in literature incorporate tumour heterogeneity concerning chemo-resistance in the modelling framework.
-                    </p>
-                    <p>
-                        Many studies in literature investigate the adaptive processes that underlie the development of intratumour phenotypic heterogeneity and the emergence of resistance to chemotherapeutic agents, see for instance and references therein. 
-                        Among these, many works consider models comprising non-local partial differential equations (PDEs) modelling the adaptive dynamics of cancer cell populations structured by a continuous phenotypic trait linked with the cell sensitivity to cytotoxic agents. 
-                        These models enabled the study of the progressive development of increasing levels of drug resistance during treatment and the role of intratumour heterogeneity in cancer persistence after therapy. This was also possible thanks to their higher amenability to analytical investigations compared to their stochastic counterparts and the mathematical theory supporting such analysis.   
-                        Some of these studies further applied optimal control methods in order to explore the most effective treatment strategies. 
-                        While this mathematical framework had not been applied to metastatic tumours prior to this manuscript,  Mirrahimi considered the adaptive dynamics of phenotype-structured populations in communicating patches, further developed with applications to speciation in ecology or host-pathogen interactions, which is easily comparable with the scenario of connected primary tumour and metastatic sites, which can be easily translated into a scenario with primary tumour and a discrete number of distant metastases.
-                    </p>
-                    <p>
-                        Pharmacokinetic (PK) modelling effectively captures the time course of the drug concentration according to various administration modes and allows to quantify the relationship between the dose and the in situ drug concentration. In these models, the body is divided into compartments, also referred to as building blocks, each of which is associated to a variable, or quantity, describing the drug concentration in the block.  The compartments are then linked to each other through the drug exchange.  
-                        This kind of models are usually coupled with a pharmacodynamic (PD) one, which captures the effect of the drug on the considered disease, and employed to find suitable drug dosing schedules to achieve optimal drug concentrations in the target tissues.  
-                        Moreover, they can also be expanded to include physiological aspects of the considered tissues, such as as organ blood flow and size,  in order to explore their influence on the drug exposure. 
-                    </p>
-                    <img class="img-responsive" src="img/Ica_3.png" alt="">
-                    <h3>Synopsis</h3>
-                    <p>
-                        We propose a mathematical model for the evolutionary dynamics of metastatic tumours under chemotherapy,  where physiological differences of the different tumour sites are integrated within a PK model of drug delivery.  
-                        In particular, the model comprises a system of coupled non-local PDEs for the phenotypic distribution of the cancer cells in the primary tumour and the metastatic site, structured by their level of resistance to the chemotherapeutic agent,  and ordinary differential equations (ODEs) for the pharmacokinetics.  
-                        We focus on a biological framework including a primary tumour that already faced angiogenesis and a newly-formed yet growing metastasis, where cancer cells characterised by higher levels of drug resistance are assumed to be more aggressive and thus able to migrate to distant sites at higher rates.  
-                        We restrict our attention to a highly perfused primary tumour and a metastatic site where cells are proliferating but not yet able to disseminate, exploring different levels of tumour vascularisation for the metastasis.  
-                    </p>
-                    <p>
-                        We specifically consider BRAF-mutated melanoma,  which is a form of skin cancer that develops in melanocytes, i.e. the cells responsible for melanin production,  from the uncontrolled proliferation of cells induced by a mutation of the BRAF gene.  
-                        Despite its lower incidence, BRAF-mutated melanoma is the most aggressive and lethal among the skin cancers, particularly due to its high metastatic rate. 
-                        These tumours can spread locally, regionally and distantly, with the most common metastatic sites being skin and subcutaneous tissue, followed by lungs, liver, bones, and brain. 
-                        Metastatic melanomas are often treated with the chemotherapeutic agent Dabrafenib, a kinase inhibitor of mutated BRAF. Despite the rapid response, with a median time around $6$ weeks, and short-term increase in patient survival, resistance to Dabrafenib persists with a median progression-free survival of approximately $6–8$ months. 
-                        For these reasons, a metastatic BRAF-mutated melanoma under Dabrafenib treatment constitutes the ideal case study to adopt for our model, which we carefully calibrate from the literature employing PK parameter values estimated from in vivo and ex vivo data from patients.  
-                    </p>
-                        <img class="img-responsive" src="img/Ica_4.png" alt="">
+                </div>
+
+                <div class="talks-list">
+
+                    <!-- MINI-COURSE 1 -->
+                    <article class="talk-box mc1" id="mc-duch">
+                        <span class="talk-tag">Mini-course 1</span>
+                        <h2 class="talk-title">Introduction to the flow equation approach to singular stochastic PDEs</h2>
+                        <p class="talk-speaker">
+                            <a href="https://pawelduch.github.io/">Paweł Duch</a>
+                            - EPFL
+                        </p>
+                        <p class="talk-abstract">
+                            This course offers a gentle introduction to the flow equation approach to singular stochastic partial differential equations (SPDEs).
+                            The method provides a flexible framework for analyzing a wide class of such equations, including those involving fractional Laplacians across the full subcritical regime.
+                            Inspired by the Wilsonian renormalization group, the approach focuses on a coarse-grained process that captures the behavior of solutions across spatial scales.
+                            Rather than analyzing the original equation directly, one studies an effective equation whose nonlinear component evolves with scale according to the flow equation, analogous to the Polchinski equation in quantum field theory.
+                            Within this framework, renormalization amounts to selecting appropriate boundary conditions for the flow equation, which can be implemented through an inductive argument.
+                        </p>
+                    </article>
+
+                    <!-- MINI-COURSE 2 -->
+                    <article class="talk-box mc2" id="mc-weber">
+                        <span class="talk-tag">Mini-course 2</span>
+                        <h2 class="talk-title">Global well-posedness for singular SPDEs</h2>
+                        <p class="talk-speaker">
+                            <a href="https://www.uni-muenster.de/FB10srvi/persdb/MM-member.php?id=1681">Hendrik Weber</a>
+                            — University of Münster
+                        </p>
+                        <p class="talk-abstract">
+                            Initiated in groundbreaking works by Hairer and Gubinelli, the theory of Parabolic Stochastic PDEs has made spectacular progress over the last few years.
+                            A systematic solution theory for various interesting and previously intractable equations from Mathematical Physics is now available.
+                            Examples include the KPZ equation and the stochastic quantisation equations for the 3D $\Phi^4$ and Yang Mills measures.
+                            These solutions have been shown to arise as scaling limits of discrete models of Statistical Mechanics and to display interesting phenomena, such as phase transitions, in their own right.
+                            <br><br>
+                            In these lectures I will review some aspects of these developments. The main focus will be the question of global existence / a priori bounds for solutions.
+                            The first works on regularity structures and paracontrolled distributions were mostly concerned with constructing local-in-time solutions using a fixed point argument in a suitable space of distributions.
+                            The focus was primarily on the description of solutions on small scales and dealing with  "infinite terms" which arise when applying non-linear functions to distributions.
+                            The matching a priori bounds were only developed more recently, among others in a series of papers by Mourrat, Moinat, Chandra, Feltes, Esquivel and me.
+                            I will explain these results, the main challenges and the arguments that permitted to overcome them.
+                        </p>
+                    </article>
+
+                    <!-- TALK 1 -->
+                    <!-- <article class="talk-box tk1">
+                        <span class="talk-tag">Talk 1</span>
+                        <h2 class="talk-title">Title of the talk</h2>
+                        <p class="talk-speaker">
+                            <a href="https://sites.google.com/view/lucasbroux/accueil/">Lucas Broux</a>
+                            — Affiliation
+                        </p>
+                        <p class="talk-abstract">
+                            Abstract to be added. Replace this placeholder with the abstract of the seminar
+                            talk. A typical abstract introduces the problem, states the main result, and
+                            briefly comments on the methods or on related work.
+                        </p>
+                    </article> -->
+
+                    <!-- TALK 2 -->
+                    <!-- <article class="talk-box tk2">
+                        <span class="talk-tag">Talk 2</span>
+                        <h2 class="talk-title">Title of the talk</h2>
+                        <p class="talk-speaker">
+                            <a href="https://sites.google.com/view/rhys-steele">Rhys Steele</a>
+                            — Affiliation
+                        </p>
+                        <p class="talk-abstract">
+                            Abstract to be added. Replace this placeholder with the abstract of the seminar
+                            talk. A typical abstract introduces the problem, states the main result, and
+                            briefly comments on the methods or on related work.
+                        </p>
+                    </article> -->
+
                 </div>
             </div>
         </div>
-    </article>
+    </div>
 
     <hr>
 
-    <!-- Footer -->
     <!-- Footer -->
     <footer>
         <div class="logos-section">
         <h4>Sponsored by</h4>
         <div class="logos-container">
           <img class="sponsor-logo" src="img/logo lpsm.png" alt="LPSM Paris Logo">
-          <img class="sponsor-logo" src="img/logoupc.jpg" alt="UPC Logo">
+          <img class="sponsor-logo" src="img/UniversiteParisCite_logo_Faculty_Sciences_couleur_RVB.png" alt="UPC Logo">
           <img class="sponsor-logo" src="img/Logo_of_Sorbonne_University.svg.png" alt="Sorbonne Logo">
           <img class="sponsor-logo" src="img/LOGO_CNRS_BLEU.png" alt="CNRS Logo">
         </div>

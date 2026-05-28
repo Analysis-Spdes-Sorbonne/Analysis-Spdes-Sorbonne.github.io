@@ -36,12 +36,7 @@
         }
     </style>
     
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 <style>
 :root {
@@ -51,7 +46,6 @@
     --nav-color: #50817e;
   }
 
-  /* --- NEW GLASS NAVBAR CSS (Hardcoded Pixels to Override Bootstrap) --- */
   .glass-navbar {
     position: fixed;
     top: 0;
@@ -69,7 +63,6 @@
   .glass-navbar .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    /* Hardcoded padding to match the title page exactly */
     padding: 20px 32px; 
     display: flex;
     justify-content: space-between;
@@ -78,7 +71,6 @@
 
   .glass-navbar .nav-brand {
     font-family: Georgia, sans-serif;
-    /* Hardcoded 24px replaces 1.5rem to fight Bootstrap shrinking */
     font-size: 24px; 
     font-weight: 700;
     color: var(--primary-text);
@@ -94,7 +86,6 @@
 
   .glass-navbar .nav-links {
     display: flex;
-    /* Hardcoded 32px gap replaces 2rem */
     gap: 32px; 
     margin: 0;
     padding: 0;
@@ -105,7 +96,6 @@
     text-decoration: none;
     color: var(--nav-color);
     font-weight: 600;
-    /* Hardcoded 15px replaces 0.95rem */
     font-size: 15px; 
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -119,7 +109,7 @@
   
 
 
-/* --- TALK BOXES --- */
+/*  TALK BOXES */
 .talks-list {
     display: flex;
     flex-direction: column;
@@ -143,7 +133,6 @@
     box-shadow: 0 8px 22px rgba(0,0,0,0.08);
 }
 
-/* Color-coded left borders matching the program legend */
 .talk-box.mc1  { border-left-color: #92d050; }
 .talk-box.mc2  { border-left-color: #ffc000; }
 .talk-box.tk1  { border-left-color: #b7dee8; }
@@ -203,7 +192,7 @@
     border-top: 1px solid #e2e8f0;
 }
 
-  /* Original Logos Section CSS */
+  /* Logos Section */
   .logos-section {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -270,7 +259,6 @@
     </nav>
 
     <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('img/green_background.jpg'); margin-top: 0; padding-top: 60px;">
         <div class="container">
             <div class="row">
@@ -430,7 +418,26 @@
                             a broad class of equations.
                         </p>
                     </article>
-
+                    <article class="talk-box st" id="st-Cardoso">
+                        <span class="talk-tag">Short talk 4</span>
+                        <h2 class="talk-title">Critical Stationary Fluctuations for a reaction-diffusion model</h2>
+                        <p class="talk-speaker">
+                            <a href="">Luis Cardoso</a>
+                            — IMPA/University of Münster
+                        </p>
+                        <p class="talk-abstract">
+                            In this talk, we consider an interacting particle system in dimension 1 whose diffusive scaling limit 
+                            is given by a reaction-diffusion equation. At criticality, we go beyond this scaling and investigate 
+                            the system's fluctuations. Building on previous work on the dynamical case, we study the fluctuations
+                            with respect to the non-reversible invariant measure. We show that the global density, properly rescaled,
+                            exhibits non-Gaussian limiting behavior, characterized explicitly by a fourth-order exponential density.
+                            Furthermore, the density field acting on zero-mean spatial modes possesses strictly smaller, Gaussian fluctuations.
+                                Consequently, the rescaled spatial field completely projects onto the global density. This establishes
+                                a non-Gaussian fluctuation for the stationary 
+                            state of a short-range system associated with the $\Phi^4$ universality class. This is based on joint
+                            work with Landim and Tsunoda.
+                        </p>
+                    </article>
                 </div>
             </div>
         </div>
